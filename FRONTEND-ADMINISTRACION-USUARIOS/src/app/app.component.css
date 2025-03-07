@@ -1,0 +1,122 @@
+.container-header{
+    margin: 20px;
+}
+.container-header p, h2{
+    margin: 10px 0px;
+}
+.container-selected{
+    display: flex;
+    text-align: center;
+}
+.box-select {
+    width: 230px;
+    height: 40px;
+    padding: 0px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #dfe7ea;
+    font-size: 14px;
+    color: #b0bdcc;
+    cursor: pointer;
+}
+
+option {
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.container-button button {
+    background-color: #dfe7ea; 
+    width: 200px;
+    color: #435370;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.container-button button:hover {
+    background-color: #8fa9d9;
+    color: white;
+}
+
+.container-select-button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-button {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.container-table{
+    padding: 20px;
+}
+
+.card-container{
+    padding: 25px;
+    border-radius: 0px;
+    border: none;
+}
+.bi-pencil-square, .btn-editar{
+    color: #168d4e;
+}
+.bi-trash, .btn-eliminar{
+    color: red;
+}
+.btn-editar, .btn-eliminar{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 80px;
+    height: 30px;
+}
+.btn-editar:hover{
+    border: 1px solid #168d4e;
+    background-color: #b0f3cf;
+    border-radius: 3px;
+}
+.btn-eliminar:hover{
+    border: 1px solid red;
+    background-color: #f3b9b0;
+    border-radius: 3px;
+}
+.table-general {
+    border: 1px solid rgba(49, 49, 49, 0.248); 
+    
+}
+.table-general th{
+    color: #435370;
+    font-weight: bold;
+    text-align: center;
+}
+.table-general td{
+    color: #435370;
+    font-weight: 400;
+}
+.table-general tr {
+    border-bottom: 1px solid rgba(49, 49, 49, 0.248);
+}
+.table-general tr:hover {
+    background-color: rgba(214, 224, 244, 0.248);
+}
+.box-registros{
+    width: 100%;
+    height: 60px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid rgba(49, 49, 49, 0.248);
+}
+.box-registros p{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
+}

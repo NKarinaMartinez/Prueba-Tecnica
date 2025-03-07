@@ -1,0 +1,6 @@
+<mat-dialog-content>
+    <p>¿Está seguro de eliminar el usuario seleccionado?</p>
+<mat-dialog-actions align="end">
+    <button mat-button class="btn-eliminar" (click)="confirmarEliminacion()">Aceptar</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn-cancelar" (click)="closeDialog()">Cancelar</button>
+</mat-dialog-actions>

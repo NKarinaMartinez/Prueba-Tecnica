@@ -1,0 +1,16 @@
+.btn-eliminar{
+    height: 30px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: #006ab2;
+    color: white;
+    font-weight: lighter;
+}
+.btn-cancelar{
+    height: 30px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: #dfe1e5;
+    color: #41516c;
+    font-weight: lighter;
+}

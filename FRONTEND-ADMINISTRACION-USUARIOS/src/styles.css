@@ -1,0 +1,9 @@
+:root {
+    --main-text-color: #435370;
+}
+
+html, body { 
+    font-family: "Montserrat";
+    color: var(--main-text-color);
+    background-color: #f3f4f6;
+}

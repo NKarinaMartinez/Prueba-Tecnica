@@ -1,0 +1,60 @@
+<form [formGroup]="usuarioActualizadoForm" (ngSubmit)="actualizarUsuario()">
+    <div class="container-titulo">
+        <div>
+            <h4>Editar usuario</h4>
+        </div>
+        <div class="button-container-closer">
+            <button class="btn-closer" (click)="closeDialog()"><i class="bi bi-x"></i></button>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="container-datos">
+        <div class="box-content">
+            <label for="">Departamento:</label>
+            <select class="box-select" id="opciones" formControlName="idDepartamento">
+                <option value="" selected>Seleccione un Departamento</option>
+                <option *ngFor="let departamento of dataDepartamentos" [value]="departamento.id">
+                    {{departamento.nombre}}
+                </option>
+            </select>
+        </div>
+        <div class="box-content">
+            <label for="">Cargo:</label>
+            <select class="box-select" id="opciones" formControlName="idCargo">
+                <option value="" selected>Seleccione un Cargo</option>
+                <option *ngFor="let cargo of dataCargos" [value]="cargo.id">
+                    {{cargo.nombre}}
+                </option>
+            </select>
+        </div>
+        <div class="box-content">
+            <label for="">Usuario:</label>
+            <input type="text" formControlName="usuario">
+        </div>
+        <div class="box-content">
+            <label for="">Email:</label>
+            <input type="text" formControlName="email">
+        </div>
+        <div class="box-content">
+            <label for="">Primer Nombre:</label>
+            <input type="text" formControlName="primerNombre">
+        </div>
+        <div class="box-content">
+            <label for="">Segundo Nombre</label>
+            <input type="text" formControlName="segundoNombre">
+        </div>
+        <div class="box-content">
+            <label for="">Primer Apellido</label>
+            <input type="text" formControlName="primerApellido">
+        </div>
+        <div class="box-content">
+            <label for="">Segundo Apellido</label>
+            <input type="text" formControlName="segundoApellido">
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close class="btn-actualizar" (click)="actualizarUsuario()">Actualizar</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn-cancelar" (click)="closeDialog()">Cancelar</button>
+    </mat-dialog-actions>
+</form>

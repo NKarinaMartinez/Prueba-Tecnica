@@ -1,0 +1,79 @@
+<div>
+  <div class="container-header">
+    <div class="container-titles">
+      <p>Módulo de Administración</p>
+      <h2>Administracción de usuarios</h2>
+    </div>
+    <div class="container-select-button">
+      <div class="container-selected">
+        <select class="box-select" id="opciones" name="opciones">
+            <option value="" selected>Seleccione un Departamento</option>
+            <option *ngFor="let departamento of dataDepartamentos" [value]="departamento.id">
+              {{departamento.nombre}}
+            </option>
+        </select>
+        <select class="box-select" id="opciones" name="opciones">
+            <option value="" selected>Seleccione un Cargo</option>
+            <option *ngFor="let cargo of dataCargos" [value]="cargo.id">
+              {{cargo.nombre}}
+            </option>
+        </select>
+      </div>
+      <div class="container-button">
+        <button mat-flat-button (click)="openDialogCrearUsuario()">Crear nuevo usuario</button>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<div class="container-table">
+  <mat-card class="card-container" appearance="outlined">
+    
+    <table mat-table [dataSource]="dataSource" class="table-general">
+      
+      <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef> Usuario </th>
+        <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombres </th>
+        <td mat-cell *matCellDef="let element"> {{element.primerNombre + ' ' + element.segundoNombre}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="apellido">
+        <th mat-header-cell *matHeaderCellDef> Apellidos </th>
+        <td mat-cell *matCellDef="let element"> {{element.primerApellido + ' ' + element.segundoApellido}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="idDepartamento">
+        <th mat-header-cell *matHeaderCellDef> Departamento </th>
+        <td mat-cell *matCellDef="let element"> {{element.departamento.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="idCargo">
+        <th mat-header-cell *matHeaderCellDef> Cargo </th>
+        <td mat-cell *matCellDef="let element"> {{element.cargo.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> 
+          <button class="btn-editar" (click)="openDialogEditarUsuario(element.id)"><i class="bi bi-pencil-square"></i>Editar</button>
+          <button class="btn-eliminar" (click)="openDialogEliminarUsuario(element.id)"><i class="bi bi-trash"></i>Eliminar</button>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div class="box-registros">
+      <p>Total Registros: {{totalRegistros}}</p>
+    </div>
+  </mat-card>  
+</div>

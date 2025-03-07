@@ -1,0 +1,73 @@
+.container-titulo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 20px;
+}
+.button-container-closer {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-closer{
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+}
+.button-container-closer i{
+    font-size: 30px;
+}
+.container-datos{
+    margin: 30px 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: -10px;
+}
+.box-select {
+    width: 240px;
+    height: 34px;
+    padding: 0px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #dfe7ea;
+    font-size: 13px;
+    color: #b0bdcc;
+    cursor: pointer;
+}
+option {
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+.box-content{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.box-content label{
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+.box-content input{
+    border-radius: 3px;
+    border: 1px solid #c6c6c6;
+    width: 240px;
+    height: 30px;
+}
+.btn-registrar{
+    height: 30px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: #006ab2;
+    color: white;
+    font-weight: lighter;
+}
+.btn-cancelar{
+    height: 30px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: #dfe1e5;
+    color: #41516c;
+    font-weight: lighter;
+}
