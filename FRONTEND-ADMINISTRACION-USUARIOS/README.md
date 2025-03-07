@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
-[Modelo desarrolado](https://github.com/NKarinaMartinez/Practica-JS/blob/main/Captura%20de%20pantalla%202025-03-07%20012112.png)
+![Modelo desarrolado](https://github.com/NKarinaMartinez/Practica-JS/blob/main/Captura%20de%20pantalla%202025-03-07%20012112.png)
 
 ## Development server
 
