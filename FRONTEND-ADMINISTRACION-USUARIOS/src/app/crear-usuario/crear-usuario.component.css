@@ -71,3 +71,6 @@ option {
     color: #41516c;
     font-weight: lighter;
 }
+::ng-deep .mat-mdc-dialog-surface {
+    border-radius: 0px !important;
+}
